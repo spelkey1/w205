@@ -1,0 +1,28 @@
+What hospitals are models of high quality care?  That is, which hospitals have the most consistently high scores for a variety of procedures?
+
+The hospitals with the highest quality of care are listed below. 
+I computed the average of every effective timely and effective measure score for each hospital and then did the same for the readmissions and deaths.
+I divided the good score by the bad score to get a composite score, which I then sorted by to find the highest performing hospitals.
+I would have included standard deviation, but it is not a function availabe in pyspark 1.5 (it starts in 1.6).
+After looking more closely at the data, it seems not all measures are recorded on the same scale.
+For example, some are median time to perform a treatment, whereas others are percent of sample who received this treatmnent.
+If I had more time, I would have ranked each hospital by measure, and then made a composite score on that.
+Nonetheless, I think methodology I used is reasonable because it factors in the good and bad measures.
+Furthermore, as we will see in a subsequent analysis, it is positively correlated with patient ratings, which is a good sign.
+
+
++-----------+--------------------+-----+-----------------+---------+------------------+
+|provider_id|                name|state|       good_score|bad_score|   composite_score|
++-----------+--------------------+-----+-----------------+---------+------------------+
+|     190268|LAFAYETTE GENERAL...|   LA|             97.2|      4.8|             20.25|
+|     190267|FAIRWAY MEDICAL C...|   LA|88.08333333333333|      4.4| 20.01893939393939|
+|     190261|OUACHITA COMMUNIT...|   LA|89.66666666666667|      4.6| 19.49275362318841|
+|     150172|PHYSICIANS' MEDIC...|   IN|            84.25|      4.6|18.315217391304348|
+|     390307|EDGEWOOD SURGICAL...|   PA|90.88888888888889|      5.0|18.177777777777777|
+|     050096|DOCTORS HOSPITAL ...|   CA|77.22222222222223|      4.8|16.087962962962965|
+|     050769|HOAG ORTHOPEDIC I...|   CA|99.08333333333333|      7.0|14.154761904761903|
+|     360266|MOUNT CARMEL NEW ...|   OH|             98.5|     7.85|12.547770700636944|
+|     330270|HOSPITAL FOR SPEC...|   NY|92.13333333333334|      7.5|12.284444444444444|
+|     280127|LINCOLN SURGICAL ...|   NE|99.16666666666667|     8.15|12.167689161554192|
++-----------+--------------------+-----+-----------------+---------+------------------+
+

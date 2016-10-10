@@ -1,0 +1,7 @@
+Are average scores for hospital quality or procedural variability correlated with patient survey responses?
+
+In order to assess this question, I found the correlation between a hospital's composite effectiveness measure and its patient survey ratings.
+I found a modest positive correlation (r = .390) between achievement and quality of care.
+Furthermore, the correlation between improvement and quality of care has a small, positive relationship at r = 220.
+These findings support the methodology I used to create my composite score.
+

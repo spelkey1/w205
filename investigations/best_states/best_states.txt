@@ -1,0 +1,21 @@
+What states are models of high quality care?
+
+The states with the highest quality of care are listed below. As with the previous question, my composite score was used.
+
+I preformed a groupby state on the hospital_summary table I previously created, computed the mean, and then just sorted. 
+In retrospect, the median might have been a better choice in order to obviate the influence of outliers.
+
++-----+------------------+-----------------+------------------+
+|state|         bad_score|       good_score|   composite_score|
++-----+------------------+-----------------+------------------+
+|   VT| 14.01205009276438|90.73569202974443| 6.472633651741451|
+|   DE| 13.65752937538652|88.14258776401633|6.4635265717415695|
+|   NH|13.757136613386612|88.11079610343951|  6.43282174020833|
+|   ID|13.418356595511769|83.83762103245127| 6.362993891310884|
+|   PA|13.686816907310922|84.16416965608316| 6.301433421160972|
+|   NE|13.982783085961659|86.48839925904909| 6.288591844003556|
+|   CO|13.483060706898733|82.96984144512486|6.2475667565809765|
+|   ME|14.070295815295818|87.47704793037467|  6.23237459181649|
+|   OH|13.710383443716777|83.86062265722467| 6.228025394034184|
+|   MA|13.769222292044875|84.50494653930829| 6.164444917118159|
++-----+------------------+-----------------+------------------+

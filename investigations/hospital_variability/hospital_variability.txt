@@ -1,0 +1,21 @@
+Which procedures have the greatest variability between hospitals?
+
+In order to assess which measures had the greatest variability between hospitals, I had to compute the standard deviation of score for each measure
+Since spark 1.5 does not have a built in std function (part of 1.6), I had to compute it the old fashioned way.
+However, I couldn't figure out how to square each value in a column, so I took the absolutely value of (score - avg(score)). 
+This wasn't ideal, but will still give an approximation of the variation in a measure.
+
++----------------+------------------+
+|      measure_id|          variance|
++----------------+------------------+
+|           ED_1b| 66.44095090734368|
+|           ED_2b|43.504561931517244|
+|          OP_18b| 30.91140204787894|
+|           OP_3b| 19.96646361511466|
+|           OP_23|17.642204199064718|
+|           STK_4|15.490917374024017|
+|          AMI_7a|15.333333333333334|
+|            OP_2|14.757352941176471|
+|           OP_21| 13.61445831988274|
+|IMM_3_FAC_ADHPCT|13.171991877460172|
++----------------+------------------+
